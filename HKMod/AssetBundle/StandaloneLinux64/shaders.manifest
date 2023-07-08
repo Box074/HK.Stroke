@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1121273107
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 21fa1c9511637cb2d3618a2efbb0e2f9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 939e20ecac0e95a3f7c5cfb3e57acb1d
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Shaders/StrokeInst.shader
+- Assets/Shaders/StrokeMat.mat
+- Assets/Shaders/StrokeMask.shader
+Dependencies: []

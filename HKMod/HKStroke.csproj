@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <ModName>Stroke</ModName>
+
+    <SupportWin>true</SupportWin>
+    <SupportLinux>true</SupportLinux>
+    <SupportOSX>true</SupportOSX>
+
+    <MultiPlatform>true</MultiPlatform>
+
+    <DefineConstants>HKMOD</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HKBuildUtils" Version="0.6.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ModResource Include="AssetBundle/StandaloneWindows/shaders" Condition="$(IsWin) == true" />
+    <ModResource Include="AssetBundle/StandaloneLinux64/shaders" Condition="$(IsLinux) == true" />
+    <ModResource Include="AssetBundle/StandaloneOSX/shaders" Condition="$(isOSX) == true" />
+
+    <Compile Include="../Assets/Scripts/**/*.cs" />
+
+    <ModReference Include="HKTool" AssemblyName="HKTool2" />
+  </ItemGroup>
+
+</Project>
